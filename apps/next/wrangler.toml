@@ -1,0 +1,13 @@
+name = "rasta-rockk"
+compatibility_date = "2023-10-30"
+send_metrics = false
+node_compat = true
+#route = "app.t4stack.com/*"
+#workers_dev = false
+account_id = "8b065ed43bf24ab7770ea3ae7e98e0a8"
+
+[[ d1_databases ]]
+binding = "DB"
+database_name = "PREV_RASTAROCK"
+database_id = "885000f9-6e3a-4bac-8463-9ea3b7950b62"
+#workers_dev = true
