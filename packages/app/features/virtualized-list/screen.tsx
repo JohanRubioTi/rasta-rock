@@ -1,30 +1,32 @@
-import { Paragraph, Spinner, VirtualList, YStack } from '@t4/ui'
+import { Paragraph, Spinner, VirtualList, XStack, YStack  } from '@t4/ui'
 import { CarListError } from '@t4/ui/src/cars/CarListError'
 import { CarListItem } from '@t4/ui/src/cars/CarListItem'
+import { ProductListItem } from '@t4/ui/src/products/productListItem'
 import { trpc } from 'app/utils/trpc'
 import { empty, error, loading, success } from 'app/utils/trpc/patterns'
 import React from 'react'
 import { match } from 'ts-pattern'
 
 export const VirtualizedListScreen = (): React.ReactNode => {
-  const carsList = trpc.car.all.useQuery()
-  const carsListLayout = match(carsList)
-    .with(error, () => <CarListError message={carsList.failureReason?.message} />)
+  const productsList = trpc.product.all.useQuery()
+  const productsListLayout = match(productsList)
+    .with(error, () => <CarListError message={productsList.failureReason?.message} />)
     .with(loading, () => (
       <YStack fullscreen f={1} jc='center' ai='center'>
         <Paragraph pb='$3'>Loading...</Paragraph>
         <Spinner />
       </YStack>
     ))
-    .with(empty, () => <Paragraph>No cars found.</Paragraph>)
+    .with(empty, () => <Paragraph>No products found.</Paragraph>)
     .with(success, () => (
-      <VirtualList data={carsList.data as any[]} renderItem={CarListItem} itemHeight={80} />
+      <VirtualList data={productsList.data as any[]} renderItem={ProductListItem} itemHeight={90} />
     ))
-    .otherwise(() => <CarListError message={carsList.failureReason?.message} />)
+    .otherwise(() => <CarListError message={productsList.failureReason?.message} />)
 
   return (
-    <YStack fullscreen f={1}>
-      {carsListLayout}
+    <YStack fullscreen flex={1}>
+      {productsListLayout}
     </YStack>
   )
 }
+

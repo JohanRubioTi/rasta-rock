@@ -14,10 +14,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     typedRoutes: true,
   },
   platforms: ['ios', 'android'],
-  name: 'T4 App',
-  slug: 't4-app',
+  name: 'RastaRock',
+  slug: 'rastarock',
   updates: {
-    url: 'https://u.expo.dev/85fc6ccd-0ce1-4e4d-804c-b15df989f97e',
+    url: 'https://u.expo.dev/f2775f55-79dd-4eb7-92e8-0d464634791a',
   },
   runtimeVersion: {
     policy: 'sdkVersion',

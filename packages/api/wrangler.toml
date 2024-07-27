@@ -3,12 +3,12 @@ compatibility_date = "2023-10-30"
 send_metrics = false
 node_compat = true
 main = "src/worker.ts"
-account_id = "719e3374c9fabba87860b809acb3c939"
+account_id = "8b065ed43bf24ab7770ea3ae7e98e0a8"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "production"
-database_id = "aa5e3923-0f1b-469a-8bb8-d10fb866efe0"
+database_id = "060bf3b7-2117-483b-9621-93a4b775e1fa"
 migrations_dir = "migrations"
 
 # The necessary secrets are:

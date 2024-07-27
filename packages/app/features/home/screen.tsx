@@ -20,7 +20,9 @@ import React, { useState } from 'react'
 import { Linking } from 'react-native'
 import { SolitoImage } from 'solito/image'
 import { useLink } from 'solito/link'
-import { useSheetOpen } from '../../atoms/sheet'
+
+import { VirtualizedListScreen } from '../virtualized-list/screen'
+import { VideosListScreen } from '../videos-list/screen'
 
 export function HomeScreen() {
   const utils = trpc.useContext()
@@ -50,10 +52,15 @@ export function HomeScreen() {
 
   return (
     <ScrollView>
-      <YStack flex={1} jc='center' ai='center' p='$4' space='$4'>
+      <YStack flex={1} jc='center' ai='center' p='$4' space='$4' bc="red" height="100%">
+
+        <VirtualizedListScreen/>
+        {/*
+        <VideosListScreen />
         <SolitoImage src='/t4-logo.png' width={128} height={128} alt='T4 Logo' />
-        <H1 textAlign='center'>👋 Hello, T4 App</H1>
+        <H1 textAlign='center'>RastaRock</H1>
         <Separator />
+
         <Paragraph textAlign='center' size={'$2'}>
           Unifying React Native + Web.
         </Paragraph>
@@ -126,42 +133,10 @@ export function HomeScreen() {
             </Button>
           </XStack>
         )}
+
+        */}
       </YStack>
     </ScrollView>
   )
 }
 
-const SheetDemo = (): React.ReactNode => {
-  const [open, setOpen] = useSheetOpen()
-  const [position, setPosition] = useState(0)
-
-  return (
-    <>
-      <Button onPress={() => setOpen((x) => !x)} space='$2'>
-        Bottom Sheet
-      </Button>
-      <Sheet
-        modal
-        open={open}
-        onOpenChange={setOpen}
-        snapPoints={[80]}
-        position={position}
-        onPositionChange={setPosition}
-        dismissOnSnapToBottom
-      >
-        <Sheet.Overlay />
-        <Sheet.Frame alignItems='center' justifyContent='center'>
-          <Sheet.Handle />
-          <Button
-            size='$6'
-            circular
-            icon={ChevronDown}
-            onPress={() => {
-              setOpen(false)
-            }}
-          />
-        </Sheet.Frame>
-      </Sheet>
-    </>
-  )
-}

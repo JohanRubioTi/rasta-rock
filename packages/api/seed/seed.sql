@@ -50,3 +50,21 @@ VALUES
   (48, 'Dacia', 'Sandero', 2020, 'Blue', 12000.00, 18000, 'Gasoline', 'Manual'),
   (49, 'Opel', 'Astra', 2018, 'Gray', 14000.00, 25000, 'Gasoline', 'Manual'),
   (50, 'Suzuki', 'Swift', 2019, 'Red', 16000.00, 22000, 'Gasoline', 'Manual');
+
+-- Insert data into User table
+INSERT INTO User (id, email, first_name, last_name, address, zip_code, phone, role) VALUES
+  ('user1', 'john.doe@example.com', 'John', 'Doe', '123 Main St', 90210, 5551234567, 'customer'),
+  ('user2', 'jane.smith@example.com', 'Jane', 'Smith', '456 Oak Ave', 10001, 5559876543, 'admin'),
+  ('user3', 'bob.johnson@example.com', 'Bob', 'Johnson', '789 Pine Ln', 60601, 5555678901, 'customer');
+
+-- Insert data into Product table 
+INSERT INTO Product (id, name, description, price, category, image_url, stock_quantity, is_active) VALUES
+  ('prod1', 'Rasta T-Shirt', 'Cool Rasta T-Shirt', 20.00, 'Clothing', 'https://example.com/rasta-tshirt.jpg', 50, 1),
+  ('prod2', 'Rasta Hat', 'Stylish Rasta Hat', 15.00, 'Accessories', 'https://example.com/rasta-hat.jpg', 30, 1),
+  ('prod3', 'Rasta Flag', 'Vibrant Rasta Flag', 10.00, 'Flags', 'https://example.com/rasta-flag.jpg', 20, 1);
+
+-- Insert data into Video table
+INSERT INTO Video (id, title, description, url) VALUES
+  ('vid1', 'Rasta Music Video', 'Check out this awesome Rasta music video!', 'https://www.youtube.com/watch?v=your-video-id'),
+  ('vid2', 'Rasta Culture Documentary', 'Learn about the rich history of Rasta culture.', 'https://www.youtube.com/watch?v=your-video-id'),
+  ('vid3', 'Product Demo Video', 'See our products in action!', 'https://www.youtube.com/watch?v=your-video-id'); 
