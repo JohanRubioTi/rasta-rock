@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1718401150946,
-      "tag": "0000_jazzy_johnny_storm",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1718649292272,
-      "tag": "0001_dear_loki",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1718649350811,
-      "tag": "0002_productive_zodiak",
+      "when": 1723601426725,
+      "tag": "0000_purple_boomerang",
       "breakpoints": true
     }
   ]

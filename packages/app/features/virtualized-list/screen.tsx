@@ -1,4 +1,4 @@
-import { Paragraph, Spinner, VirtualList, XStack, YStack  } from '@t4/ui'
+import { Paragraph, Spinner, VirtualList, XStack, YStack } from '@t4/ui'
 import { CarListError } from '@t4/ui/src/cars/CarListError'
 import { CarListItem } from '@t4/ui/src/cars/CarListItem'
 import { ProductListItem } from '@t4/ui/src/products/productListItem'
@@ -19,14 +19,13 @@ export const VirtualizedListScreen = (): React.ReactNode => {
     ))
     .with(empty, () => <Paragraph>No products found.</Paragraph>)
     .with(success, () => (
-      <VirtualList data={productsList.data as any[]} renderItem={ProductListItem} itemHeight={90} />
+      <VirtualList data={productsList.data as any[]} renderItem={ProductListItem} />
     ))
     .otherwise(() => <CarListError message={productsList.failureReason?.message} />)
 
   return (
-    <YStack fullscreen flex={1}>
+    <XStack>
       {productsListLayout}
-    </YStack>
+    </XStack>
   )
 }
-

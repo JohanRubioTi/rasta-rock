@@ -14,4 +14,3 @@ export const paymentRouter = router({
       await db.insert(PaymentTable).values(input).run()
     }),
 })
-

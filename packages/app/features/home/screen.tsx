@@ -23,6 +23,7 @@ import { useLink } from 'solito/link'
 
 import { VirtualizedListScreen } from '../virtualized-list/screen'
 import { VideosListScreen } from '../videos-list/screen'
+import { Navbar } from '../../../ui/src/navbar/navbar.tsx'
 
 export function HomeScreen() {
   const utils = trpc.useContext()
@@ -51,11 +52,15 @@ export function HomeScreen() {
   })
 
   return (
-    <ScrollView>
-      <YStack flex={1} jc='center' ai='center' p='$4' space='$4' bc="red" height="100%">
+     <YStack flex={1} backgroundColor="red">
+       <Navbar/>
+       <VideosListScreen />
+     </YStack>
+  )
+}
 
-        <VirtualizedListScreen/>
-        {/*
+
+/*
         <VideosListScreen />
         <SolitoImage src='/t4-logo.png' width={128} height={128} alt='T4 Logo' />
         <H1 textAlign='center'>RastaRock</H1>
@@ -134,9 +139,4 @@ export function HomeScreen() {
           </XStack>
         )}
 
-        */}
-      </YStack>
-    </ScrollView>
-  )
-}
-
+        */

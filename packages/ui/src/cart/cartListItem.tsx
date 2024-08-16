@@ -17,7 +17,7 @@ export const CartListItem = (item: Product): React.ReactElement => {
           {`${item.name} `}
         </Paragraph>
         <Paragraph paddingLeft='$3' fontSize={16} opacity={0.6}>
-          {item.category} - {item.stock_quantity} 
+          {item.category} - {item.stock_quantity}
           {formatPrice(item.price)}
         </Paragraph>
 
@@ -26,7 +26,7 @@ export const CartListItem = (item: Product): React.ReactElement => {
         </Paragraph>
 
         <Button onPress={() => removeFromCart({ id: item.id })} space='$2'>
-          Delete 
+          Delete
         </Button>
       </YStack>
     </YStack>

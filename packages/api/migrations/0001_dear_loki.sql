@@ -1,1 +1,0 @@
-ALTER TABLE `Product` RENAME COLUMN `stock-quantity` TO `stock_quantity`;

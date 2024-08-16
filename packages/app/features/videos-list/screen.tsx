@@ -1,4 +1,4 @@
-import { Paragraph, Spinner, VirtualList, YStack } from '@t4/ui'
+import { Paragraph, Spinner, VirtualList, XStack, YStack } from '@t4/ui'
 import { CarListError } from '@t4/ui/src/cars/CarListError'
 import { CarListItem } from '@t4/ui/src/cars/CarListItem'
 import { VideoListItem } from '@t4/ui/src/video/videoListItem'
@@ -24,9 +24,9 @@ export const VideosListScreen = (): React.ReactNode => {
     .otherwise(() => <CarListError message={videosList.failureReason?.message} />)
 
   return (
-    <YStack fullscreen f={1}>
-      {videosListLayout}
-    </YStack>
+    <XStack backgroundColor="blue" f={0.6}>
+
+
+    </XStack>
   )
 }
-

@@ -1,18 +1,16 @@
 import { atom, useAtom } from 'jotai'
-import { useSetAtom } from "jotai";
+import { useSetAtom } from 'jotai'
 import { CartListItem } from '@t4/ui/src/cart/cartListItem'
 
 import { useSheetOpen } from '../../../app/atoms/sheet'
 import { addToCartAtom, removeFromCartAtom } from '../../../app/atoms/cart'
 
-
 const ProductSheet = (item: Product): React.ReactNode => {
   const [open, setOpen] = useSheetOpen()
   const [position, setPosition] = useState(0)
 
-  const cart = useAtomValue(cartAtom);
-  const totalCartValue = useAtomValue(cartTotalAtom);
-
+  const cart = useAtomValue(cartAtom)
+  const totalCartValue = useAtomValue(cartTotalAtom)
 
   return (
     <>

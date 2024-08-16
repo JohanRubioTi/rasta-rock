@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "805e8dc2-abbd-4d84-b5c6-17ec6402d930",
+  "id": "35688ece-84ab-4132-b678-e8ebd9c656e0",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "Car": {
@@ -121,8 +121,8 @@
           "notNull": true,
           "autoincrement": false
         },
-        "stock-quantity": {
-          "name": "stock-quantity",
+        "stock_quantity": {
+          "name": "stock_quantity",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
@@ -231,8 +231,8 @@
           "notNull": true,
           "autoincrement": false
         },
-        "image_url": {
-          "name": "image_url",
+        "url": {
+          "name": "url",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
